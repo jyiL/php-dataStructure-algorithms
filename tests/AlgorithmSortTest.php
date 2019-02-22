@@ -21,6 +21,10 @@ class AlgorithmSortTest extends TestCase
         'BucketSort',
         'HeapSort',
         'InsertionSort',
+        'MergeSort',
+        'QuickSort',
+        'RadixSort',
+        'SelectionSort',
     ];
 
     private $sortNameArrClass = [
@@ -29,6 +33,10 @@ class AlgorithmSortTest extends TestCase
         'BucketSort' => 'Algorithms\Sort\BucketSort',
         'HeapSort' => 'Algorithms\Sort\HeapSort',
         'InsertionSort' => 'Algorithms\Sort\InsertionSort',
+        'MergeSort' => 'Algorithms\Sort\MergeSort',
+        'QuickSort' => 'Algorithms\Sort\QuickSort',
+        'RadixSort' => 'Algorithms\Sort\RadixSort',
+        'SelectionSort' => 'Algorithms\Sort\SelectionSort',
     ];
 
     public function testBind()
@@ -65,7 +73,9 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\bubblesort']->sort($_numberArr);
 
         printf('After BubbleSort--' . implode(',', $tmp) . PHP_EOL);
-        $this->assertNotEquals(implode(',', $_numberArr), implode(',', $tmp));
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
     }
 
     /**
@@ -82,7 +92,9 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\bubblesortoptimization']->sort($_numberArr);
 
         printf('After BubbleSortOptimization--' . implode(',', $tmp) . PHP_EOL);
-        $this->assertNotEquals(implode(',', $_numberArr), implode(',', $tmp));
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
     }
 
     /**
@@ -99,7 +111,9 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\bucketsort']->sort($_numberArr);
 
         printf('After BucketSort--' . implode(',', $tmp) . PHP_EOL);
-        $this->assertNotEquals(implode(',', $_numberArr), implode(',', $tmp));
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
     }
 
     /**
@@ -116,7 +130,9 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\heapsort']->sort($_numberArr);
 
         printf('After HeapSort--' . implode(',', $tmp) . PHP_EOL);
-        $this->assertNotEquals(implode(',', $_numberArr), implode(',', $tmp));
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
     }
 
     /**
@@ -133,7 +149,85 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\insertionsort']->sort($_numberArr);
 
         printf('After InsertionSort--' . implode(',', $tmp) . PHP_EOL);
-        $this->assertNotEquals(implode(',', $_numberArr), implode(',', $tmp));
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
+    }
+
+    /**
+     * @depends testBind
+     */
+    public function testMergeSort($container)
+    {
+        $sort = $this->make($container, 'MergeSort');
+
+        $_numberArr = $this->getRandNumberArr(8);
+
+        printf(PHP_EOL . '---MergeSort---' . PHP_EOL);
+        printf('Before MergeSort--' . implode(',', $_numberArr) . PHP_EOL);
+        $tmp = $sort->sortArr['algorithms\sort\mergesort']->sort($_numberArr);
+
+        printf('After MergeSort--' . implode(',', $tmp) . PHP_EOL);
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
+    }
+
+    /**
+     * @depends testBind
+     */
+    public function testQuickSort($container)
+    {
+        $sort = $this->make($container, 'QuickSort');
+
+        $_numberArr = $this->getRandNumberArr(8);
+
+        printf(PHP_EOL . '---QuickSort---' . PHP_EOL);
+        printf('Before QuickSort--' . implode(',', $_numberArr) . PHP_EOL);
+        $tmp = $sort->sortArr['algorithms\sort\quicksort']->sort($_numberArr);
+
+        printf('After QuickSort--' . implode(',', $tmp) . PHP_EOL);
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
+    }
+
+    /**
+     * @depends testBind
+     */
+    public function testRadixSort($container)
+    {
+        $sort = $this->make($container, 'RadixSort');
+
+        $_numberArr = $this->getRandNumberArr(8);
+
+        printf(PHP_EOL . '---RadixSort---' . PHP_EOL);
+        printf('Before RadixSort--' . implode(',', $_numberArr) . PHP_EOL);
+        $tmp = $sort->sortArr['algorithms\sort\radixsort']->sort($_numberArr);
+
+        printf('After RadixSort--' . implode(',', $tmp) . PHP_EOL);
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
+    }
+
+    /**
+     * @depends testBind
+     */
+    public function testSelectionSort($container)
+    {
+        $sort = $this->make($container, 'SelectionSort');
+
+        $_numberArr = $this->getRandNumberArr(8);
+
+        printf(PHP_EOL . '---SelectionSort---' . PHP_EOL);
+        printf('Before SelectionSort--' . implode(',', $_numberArr) . PHP_EOL);
+        $tmp = $sort->sortArr['algorithms\sort\selectionsort']->sort($_numberArr);
+
+        printf('After SelectionSort--' . implode(',', $tmp) . PHP_EOL);
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
     }
 
 
