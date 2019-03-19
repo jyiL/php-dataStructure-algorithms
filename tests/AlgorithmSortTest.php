@@ -25,6 +25,7 @@ class AlgorithmSortTest extends TestCase
         'QuickSort',
         'RadixSort',
         'SelectionSort',
+        'CombSort',
     ];
 
     private $sortNameArrClass = [
@@ -37,6 +38,7 @@ class AlgorithmSortTest extends TestCase
         'QuickSort' => 'Algorithms\Sort\QuickSort',
         'RadixSort' => 'Algorithms\Sort\RadixSort',
         'SelectionSort' => 'Algorithms\Sort\SelectionSort',
+        'CombSort' => 'Algorithms\Sort\CombSort',
     ];
 
     public function testBind()
@@ -225,6 +227,25 @@ class AlgorithmSortTest extends TestCase
         $tmp = $sort->sortArr['algorithms\sort\selectionsort']->sort($_numberArr);
 
         printf('After SelectionSort--' . implode(',', $tmp) . PHP_EOL);
+
+        sort($_numberArr);
+        $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
+    }
+
+    /**
+     * @depends testBind
+     */
+    public function testCombSort($container)
+    {
+        $sort = $this->make($container, 'CombSort');
+
+        $_numberArr = $this->getRandNumberArr(8);
+
+        printf(PHP_EOL . '---CombSort---' . PHP_EOL);
+        printf('Before CombSort--' . implode(',', $_numberArr) . PHP_EOL);
+        $tmp = $sort->sortArr['algorithms\sort\combsort']->sort($_numberArr);
+
+        printf('After CombSort--' . implode(',', $tmp) . PHP_EOL);
 
         sort($_numberArr);
         $this->assertEquals(implode(',', $_numberArr), implode(',', $tmp));
