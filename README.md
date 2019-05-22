@@ -11,10 +11,9 @@ php 数据结构和算法
 ### test
     ./vendor/bin/phpunit
     
-    
 ### algorithms 算法
 
-1. Sorting
+* Sorting
     - Bubble Sort 冒泡排序
     - Bubble Sort Optimization 冒泡排序优化
     - Bucket Sort 桶排序
@@ -25,3 +24,20 @@ php 数据结构和算法
     - Radix Sort 基数排序
     - Selection Sort 选择排序
     - Comb Sort 梳排序
+    
+* Graph
+    - BFS (Breadth First Search)  
+    
+### designPattern 设计模式
+
+* Creational 创造型
+    - [Abstract Factory 抽象工厂模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/UMD5mQUIFw.png) 
+    - [Builder 建造者模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/JFAXquMVD9.png) 
+    - [Factory Method 工厂方法模式](https://iocaffcdn.phphub.org/uploads/images/201901/02/23060/AyLHGgVROw.png!large) 
+    - [Singleton 单例模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/bVjGzeAlPV.png) 
+    - [Static Factory 静态工厂模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/wZFkQjM3UG.png) 
+    
+* Structural 结构型
+    - [Adapter 适配器模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/oHBRHvqDHI.png)
+
+* Behavioral 行为型
