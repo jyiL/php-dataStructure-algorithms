@@ -39,5 +39,7 @@ php 数据结构和算法
     
 * Structural 结构型
     - [Adapter 适配器模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/oHBRHvqDHI.png)
+    - [Dependency Injection 依赖注入模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/MihvMhMofO.png)
+    - [Facade 门面模式](https://iocaffcdn.phphub.org/uploads/images/201803/19/1/z5RZ820Gdy.png)
 
 * Behavioral 行为型
