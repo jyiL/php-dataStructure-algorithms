@@ -6,7 +6,7 @@
  * Time: 11:58 AM
  */
 
-namespace DesignPattern\structural\Facade;
+namespace DesignPattern\Structural\Facade;
 
 /**
  * 创建操作系统接口类 OsInterface 。

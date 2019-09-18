@@ -6,7 +6,7 @@
  * Time: 11:23 AM
  */
 
-namespace DesignPattern\structural\adapter;
+namespace DesignPattern\Structural\Adapter;
 
 /**
  * 这里是适配过的类. 在生产代码中, 这可能是来自另一个包的类，一些供应商提供的代码。

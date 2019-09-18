@@ -6,7 +6,7 @@
  * Time: 11:45 AM
  */
 
-namespace DesignPattern\structural\dependencyInjection;
+namespace DesignPattern\Structural\DependencyInjection;
 
 class DatabaseConnection
 {

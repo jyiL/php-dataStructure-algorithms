@@ -28,6 +28,11 @@ php 数据结构和算法
 * Graph
     - BFS (Breadth First Search)  
     
+### Data Structure 数据结构
+
+* Linked List 链表
+    - Single Linked List 单链表
+    
 ### designPattern 设计模式
 
 * Creational 创造型

@@ -6,7 +6,7 @@
  * Time: 11:21 AM
  */
 
-namespace DesignPattern\structural\adapter;
+namespace DesignPattern\Structural\Adapter;
 
 interface EBookInterface
 {

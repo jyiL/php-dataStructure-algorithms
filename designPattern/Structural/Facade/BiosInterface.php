@@ -6,7 +6,7 @@
  * Time: 11:59 AM
  */
 
-namespace DesignPattern\structural\Facade;
+namespace DesignPattern\Structural\Facade;
 
 /**
  * 创建基础输入输出系统接口类 BiosInterface 。

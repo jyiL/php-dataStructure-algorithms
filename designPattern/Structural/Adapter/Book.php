@@ -6,7 +6,7 @@
  * Time: 11:18 AM
  */
 
-namespace DesignPattern\structural\adapter;
+namespace DesignPattern\Structural\Adapter;
 
 class Book implements BookInterface
 {

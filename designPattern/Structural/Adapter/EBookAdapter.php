@@ -6,7 +6,7 @@
  * Time: 11:20 AM
  */
 
-namespace DesignPattern\structural\adapter;
+namespace DesignPattern\Structural\Adapter;
 
 /**
  * 这里是一个适配器. 注意他实现了 BookInterface,

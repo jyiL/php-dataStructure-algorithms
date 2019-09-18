@@ -19,6 +19,7 @@
     "autoload": {
         "psr-4": {
             "Algorithms\\": "algorithms/",
+            "DataStructure\\": "dataStructure/",
             "DesignPattern\\": "designPattern/",
             "ContainerCore\\": "./"
         }

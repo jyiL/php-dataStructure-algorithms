@@ -6,7 +6,7 @@
  * Time: 11:53 AM
  */
 
-namespace DesignPattern\structural\Facade;
+namespace DesignPattern\Structural\Facade;
 
 class Facade
 {
