@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace DataStructure\LinkedList;
 
 use DataStructure\LinkedList\ListNode;
-use phpDocumentor\Reflection\Types\Object_;
 
 class SingleLinkedList
 {
@@ -27,10 +26,7 @@ class SingleLinkedList
     {
         $current = $this->header;
 
-        if ($item === 'USA') {
-            var_dump($current);
-        }
-        while ($current->data !== $item) {
+        while (!empty($current->data) && $current->data !== $item) {
             $current = $current->next;
         }
 
@@ -64,7 +60,7 @@ class SingleLinkedList
      *
      * @return mixed
      */
-    public function update($old, $new) : mixed
+    public function update($old, $new)
     {
         $current = $this->header;
 

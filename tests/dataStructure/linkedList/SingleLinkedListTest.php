@@ -47,12 +47,50 @@ class SingleLinkedListTest extends TestCase
      * @depends testInsert
      *
      * @param SingleLinkedList $linkedList
+     *
+     * @return SingleLinkedList
      */
     public function testDelete($linkedList)
     {
         $linkedList->delete('USA');
 
-        var_dump($linkedList->find('USA'));
-        exit;
+        $this->assertEmpty($linkedList->find('USA'));
+
+        return $linkedList;
+    }
+
+    /**
+     * @depends testDelete
+     *
+     * @param SingleLinkedList $linkedList
+     *
+     * @return SingleLinkedList
+     */
+    public function testUpdate($linkedList)
+    {
+        $linkedList->update('England', 'Japan');
+
+        $this->assertNotEmpty($linkedList->find('Japan'));
+
+        return $linkedList;
+    }
+
+    /**
+     * @depends testUpdate
+     *
+     * @param SingleLinkedList $linkedList
+     *
+     * @throws
+     */
+    public function testClear($linkedList)
+    {
+        $linkedList->clear();
+
+        $ref = new ReflectionClass($linkedList);
+
+        $header = $ref->getProperty('header');
+        $header->setAccessible(true);
+
+        $this->assertEmpty($header->getValue($linkedList));
     }
 }

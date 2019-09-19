@@ -2,7 +2,10 @@
 
 php 数据结构和算法
 
-### composer
+### git
+    git clone git@github.com:jyiL/php-dataStructure-algorithms.git
+
+### ~~composer~~
     composer create-project jyil/php-data-structure-algorithms path
     
 ### install
